@@ -2,6 +2,7 @@ package database
 
 import (
 	"database/sql"
+    "fmt"
 )
 
 func StartDB() (*sql.DB, error) {
@@ -26,6 +27,8 @@ func StartDB() (*sql.DB, error) {
 	if err != nil {
 		return nil, err
 	}
+
+    fmt.Println("Database started successfully");
 
 	return db, nil
 }
